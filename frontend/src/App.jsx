@@ -58,7 +58,7 @@ function HomePage() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/send-email",
+        "http://3.111.229.177:5000/send-email",
         formData
       );
       setResponseMessage(response.data.message);
