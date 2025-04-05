@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
+  console.log("➡️ Received from frontend:", req.body);
   
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
